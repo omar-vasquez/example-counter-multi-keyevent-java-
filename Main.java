@@ -53,7 +53,17 @@ public class Main{
 
         //Definimos el tamaño de la ventana.
         JFrame frame = new JFrame("Contador Control + F2"); 
-        frame.setSize(200, 200);
+
+        //Obtenemos la imagen.-
+        ImageIcon bg = new ImageIcon( this.getClass().getResource("./src/270.png"));
+
+        //Lo colocamos dentro de un lable
+        JLabel etiqueta = new JLabel(bg);
+
+        //Agregamos nuestra imagen al panel.
+        frame.getContentPane().add(etiqueta);
+
+        frame.setSize(500, 500);
 
         //Boton para resetear
         JButton boton = new JButton("Resetear");
